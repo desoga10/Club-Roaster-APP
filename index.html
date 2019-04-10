@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Player Register App</title>
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav
+      class="navbar navbar-expand-sm bg-dark navbar-dark d-flex justify-content-center"
+    >
+      <h1 class="pl-4 text-white" id="header">
+        <i class="far fa-futbol pr-3"></i>
+        The Titans Roaster App
+      </h1>
+    </nav>
+
+    <!-- Form Section -->
+    <div class=" container mt-4">
+      <div class="pt-5 form row">
+        <div class="col-lg-12 card-body">
+          <form id="player-form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="residence">Residence</label>
+              <input
+                type="text"
+                class="form-control"
+                id="residence"
+                placeholder="123 Cotes Str"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="position">Position</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="position"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="country">Country</label>
+                <select id="country" class="form-control" required>
+                  <option selected>Choose...</option>
+                  <option>USA</option>
+                  <option>Argentina</option>
+                  <option>Iran</option>
+                  <option>Australia</option>
+                  <option>Nigeria</option>
+                  <option>France</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="jersey">Jersey Number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="jersey"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Register Player
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Table Section  -->
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Residence</th>
+            <th>Position</th>
+            <th>Country</th>
+            <th>Jersey</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="playerlist"></tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
